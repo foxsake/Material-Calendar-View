@@ -2,6 +2,7 @@ package com.applandeo.materialcalendarview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.ArrayRes;
 import android.support.annotation.ColorRes;
@@ -264,6 +265,11 @@ public class CalendarView extends LinearLayout {
             ((TextView) findViewById(R.id.saturdayLabel)).setText(daysSymbols[5]);
             ((TextView) findViewById(R.id.sundayLabel)).setText(daysSymbols[6]);
         }
+    }
+
+    public void setHeaderColor(int color){
+        ConstraintLayout mCalendarHeader = (ConstraintLayout) findViewById(R.id.calendarHeader);
+        mCalendarHeader.setBackgroundDrawable(new ColorDrawable(color));
     }
 
     private void initUiElements() {
